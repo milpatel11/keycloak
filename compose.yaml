@@ -1,0 +1,24 @@
+services:
+  keycloak:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        KEYCLOAK_DIST: quarkus/dist/target/keycloak-26.8.0.tar.gz
+    image: custom-keycloak:26.8.0-java27
+    container_name: keycloak
+    restart: unless-stopped
+    ports:
+      - "8181:8080"
+    environment:
+      KC_HOSTNAME: ${KC_HOSTNAME:-https://auth.shreekrupa.net}
+      KC_HTTP_ENABLED: "true"
+      KC_PROXY_HEADERS: "xforwarded"
+      KC_HEALTH_ENABLED: "true"
+      KC_DB: "postgres"
+      KC_DB_URL: ${KC_DB_URL}
+      KC_DB_USERNAME: ${KC_DB_USERNAME}
+      KC_DB_PASSWORD: ${KC_DB_PASSWORD}
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN:-admin}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+    command: ["start", "--optimized"]
