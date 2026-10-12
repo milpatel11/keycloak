@@ -11,7 +11,6 @@
 
     <artifactId>keycloak-admin-v2-tests</artifactId>
     <name>Keycloak Admin API v2 Tests</name>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
