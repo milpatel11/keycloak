@@ -1,0 +1,67 @@
+/* Shree Krupa brand overlay for the Administration Console (keycloak.v2). */
+:root {
+    --sk-navy: #0A1A2F;
+    --sk-navy-hover: #173252;
+    --sk-gold: #C6A14A;
+    --sk-gold-dark: #A57C2F;
+    --sk-cloud: #E6EDF5;
+    --pf-v5-global--primary-color--100: var(--sk-navy);
+    --pf-v5-global--primary-color--200: var(--sk-navy-hover);
+    --pf-v5-global--link--Color: var(--sk-gold-dark);
+    --pf-v5-global--link--Color--hover: var(--sk-navy);
+    --pf-v5-global--active-color--100: var(--sk-gold);
+}
+
+/* === Masthead (top bar) navy with gold underline === */
+.pf-v5-c-masthead,
+header.pf-v5-c-masthead {
+    --pf-v5-c-masthead--BackgroundColor: var(--sk-navy);
+    background-color: var(--sk-navy) !important;
+    border-bottom: 3px solid var(--sk-gold);
+}
+
+.pf-v5-c-masthead .pf-v5-c-button.pf-m-plain,
+.pf-v5-c-masthead .pf-v5-c-menu-toggle,
+.pf-v5-c-masthead .pf-v5-c-menu-toggle__text,
+.pf-v5-c-masthead .pf-v5-svg {
+    color: #FFFFFF !important;
+}
+
+/* === Left sidebar navy with light links, gold active item === */
+.pf-v5-c-page__sidebar {
+    --pf-v5-c-page__sidebar--BackgroundColor: var(--sk-navy);
+    background-color: var(--sk-navy) !important;
+}
+
+.pf-v5-c-page__sidebar .pf-v5-c-nav__link {
+    color: var(--sk-cloud);
+}
+
+.pf-v5-c-page__sidebar .pf-v5-c-nav__link:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.pf-v5-c-page__sidebar .pf-v5-c-nav__link.pf-m-current {
+    --pf-v5-c-nav__link--m-current--Color: var(--sk-gold);
+    --pf-v5-c-nav__link--before--BorderColor: var(--sk-gold);
+    color: var(--sk-gold);
+    background-color: rgba(198, 161, 74, 0.12);
+}
+
+.pf-v5-c-page__sidebar .pf-v5-c-nav__link.pf-m-current::before {
+    border-inline-start-color: var(--sk-gold) !important;
+}
+
+.pf-v5-c-page__sidebar .pf-v5-c-nav__section-title {
+    color: #8A96A2;
+}
+
+/* Primary buttons follow the brand navy. */
+.pf-v5-c-button.pf-m-primary {
+    background-color: var(--sk-navy);
+}
+
+.pf-v5-c-button.pf-m-primary:hover {
+    background-color: var(--sk-navy-hover);
+}

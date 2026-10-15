@@ -10,6 +10,6 @@
         "types": [ "login" ]
     }, {
         "name" : "shreekrupa",
-        "types": [ "login" ]
+        "types": [ "login", "account", "admin", "email" ]
     }]
 }
